@@ -13,7 +13,7 @@ pluginManagement {
         }
     }
 }
-rootProject.name = "DemoKMM"
+rootProject.name = "kmm-started-project"
 
 
 include(":androidApp")

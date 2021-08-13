@@ -48,7 +48,6 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                implementation("com.google.android.material:material:1.2.0")
                 implementation("io.ktor:ktor-client-android:$ktorVersion")
                 implementation("com.squareup.sqldelight:android-driver:$sqlDelightVersion")
             }
@@ -56,7 +55,7 @@ kotlin {
         val androidTest by getting {
             dependencies {
                 implementation(kotlin("test-junit"))
-                implementation("junit:junit:4.12")
+                implementation("junit:junit:4.13.2")
             }
         }
         val iosMain by getting {
@@ -74,8 +73,6 @@ android {
     defaultConfig {
         minSdkVersion(24)
         targetSdkVersion(29)
-        versionCode = 1
-        versionName = "1.0"
     }
     buildTypes {
         getByName("release") {

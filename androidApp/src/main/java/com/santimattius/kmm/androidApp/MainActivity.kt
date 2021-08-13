@@ -1,14 +1,12 @@
 package com.santimattius.kmm.androidApp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.FrameLayout
-import com.santimattius.kmm.shared.Greeting
-import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.santimattius.kmm.androidApp.databinding.ActivityMainBinding
+import com.santimattius.kmm.shared.Greeting
 import com.santimattius.kmm.shared.SpaceXSDK
 import com.santimattius.kmm.shared.cache.DatabaseDriverFactory
 import kotlinx.coroutines.MainScope
@@ -52,7 +50,7 @@ class MainActivity : AppCompatActivity() {
     private fun displayLaunches(needReload: Boolean) {
         viewBinding.progressBar.isVisible = true
         mainScope.launch {
-            kotlin.runCatching {
+            runCatching {
                 sdk.getLaunches(needReload)
             }.onSuccess {
                 launchesRvAdapter.launches = it

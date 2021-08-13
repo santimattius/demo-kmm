@@ -12,17 +12,7 @@ repositories {
     jcenter()
     mavenCentral()
 }
-dependencies {
-    implementation(project(":shared"))
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
-    implementation("androidx.core:core-ktx:1.3.1")
-    implementation("com.google.android.material:material:1.2.0")
-    implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.0")
-    implementation("androidx.recyclerview:recyclerview:1.1.0")
-    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
-    implementation("androidx.cardview:cardview:1.0.0")
-}
+
 android {
     compileSdkVersion(29)
     defaultConfig {
@@ -47,4 +37,16 @@ android {
     }
 
     viewBinding.isEnabled = true
+}
+
+dependencies {
+    implementation(project(":shared"))
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+    implementation("androidx.core:core-ktx:1.3.1")
+    implementation("com.google.android.material:material:1.2.0")
+    implementation("androidx.appcompat:appcompat:1.2.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.0.0")
+    implementation("androidx.recyclerview:recyclerview:1.1.0")
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+    implementation("androidx.cardview:cardview:1.0.0")
 }
